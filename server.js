@@ -28,8 +28,11 @@ router.get('/set/:key', async (ctx) => {
     ctx.throw(404);
     return
   }
-  console.log(ctx.query)
   ewelink.setDevicePowerState(ctx.query.value === 'true')
+  ctx.body = 'ok';
+})
+
+router.get('/', async (ctx) => {
   ctx.body = 'ok';
 })
 

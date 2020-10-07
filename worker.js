@@ -18,7 +18,7 @@ ewelink.openWebSocket(d => {
     console.log('ewelink changed state to: ' + d.params.switch);
     if (d.params.switch === 'on') {
       blynk.setBlynkState(true);
-      console.log('starting boiler delay');
+      console.log('starting boiler delay of ' + switchOffDelay.asMinutes() + ' minutes');
       agenda.schedule(moment().add(switchOffDelay), 'set ewelink state', {state: false});
     } else if (d.params.switch === 'off') {
       blynk.setBlynkState(false);
