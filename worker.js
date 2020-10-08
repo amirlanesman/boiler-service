@@ -7,7 +7,7 @@ const ewelink = require('./lib/handlers/ewelink')
 const blynk = require('./lib/handlers/blynk')
 
 
-const SWITCH_OFF_DELAY_MINUTES = parseInt(process.env.SWITCH_OFF_DELAY_MINUTES || '10')
+const SWITCH_OFF_DELAY_MINUTES = parseInt(process.env.SWITCH_OFF_DELAY_MINUTES || '50')
 const switchOffDelay = moment.duration(SWITCH_OFF_DELAY_MINUTES, 'minutes');
 
 ewelink.openWebSocket(d => {
