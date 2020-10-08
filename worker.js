@@ -2,7 +2,6 @@ require('dotenv').config();
 const moment = require('moment');
 const agenda = require('./lib/agenda.js');
 require('./lib/jobs/ewelink')(agenda)
-require('./lib/jobs/blynk')(agenda)
 const ewelink = require('./lib/handlers/ewelink')
 const blynk = require('./lib/handlers/blynk')
 
